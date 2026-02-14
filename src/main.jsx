@@ -1,13 +1,12 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
-import "./css/index.css";
+import React from "react";
+import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
+import { BrowserRouter } from "react-router-dom";
 
-createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <BrowserRouter>
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <BrowserRouter basename="/Movie_Panel">
       <App />
     </BrowserRouter>
-  </StrictMode>,
+  </React.StrictMode>,
 );
